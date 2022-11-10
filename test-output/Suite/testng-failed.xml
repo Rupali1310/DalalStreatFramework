@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="com.qa.utility.ListenerSetup"/>
+    <listener class-name="com.qa.utility.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.qa.testLayer.TestTransactions">
+        <methods>
+          <include name="showTransactionsHistoryAxis"/>
+          <include name="tearDown"/>
+          <include name="start"/>
+          <include name="setup"/>
+          <include name="stop"/>
+        </methods>
+      </class> <!-- com.qa.testLayer.TestTransactions -->
+      <class name="com.qa.testLayer.BuyShareTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyScenarioWipro"/>
+          <include name="start"/>
+          <include name="setup"/>
+          <include name="stop"/>
+          <include name="verifyScenarioAxis"/>
+        </methods>
+      </class> <!-- com.qa.testLayer.BuyShareTest -->
+      <class name="com.qa.testLayer.SellShareTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="start"/>
+          <include name="setup"/>
+          <include name="stop"/>
+          <include name="verifySellScenarioAxis"/>
+        </methods>
+      </class> <!-- com.qa.testLayer.SellShareTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
